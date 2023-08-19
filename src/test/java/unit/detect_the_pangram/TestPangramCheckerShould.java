@@ -3,9 +3,8 @@ package unit.detect_the_pangram;
 import org.detect_the_pangram.PangramChecker;
 import org.junit.Assert;
 import org.junit.Test;
-import org.word_wrap.WordWrap;
 
-public class TestPangramDetectorShould {
+public class TestPangramCheckerShould {
 //    ! sentence.includes(alphabet) -> return false
 //    sentence.includes(alphabet) -> return true
 
