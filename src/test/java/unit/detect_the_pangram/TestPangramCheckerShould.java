@@ -10,7 +10,7 @@ public class TestPangramCheckerShould {
 
     @Test
     public void detect_a_text_that_is_not_a_pangram() throws Exception {
-        String sentence = "This is not a pangram";
+        String sentence = "this is not a pangram";
 
         PangramChecker checker = new PangramChecker();
 
@@ -19,7 +19,16 @@ public class TestPangramCheckerShould {
 
     @Test
     public void detect_a_text_that_is_a_pangram() throws Exception {
-        String sentence = "The quick brown fox jumps over the lazy dog";
+        String sentence = "the quick brown fox jumps over the lazy dog";
+
+        PangramChecker checker = new PangramChecker();
+
+        Assert.assertTrue(checker.isPangram(sentence));
+    }
+
+    @Test
+    public void detect_a_text_that_is_a_pangram_when_is_capitalized() throws Exception {
+        String sentence = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
 
         PangramChecker checker = new PangramChecker();
 
