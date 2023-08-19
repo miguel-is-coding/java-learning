@@ -10,10 +10,19 @@ public class TestPangramCheckerShould {
 
     @Test
     public void detect_a_text_that_is_not_a_pangram() throws Exception {
-        String text = "This is not a pangram";
+        String sentence = "This is not a pangram";
 
         PangramChecker checker = new PangramChecker();
 
-        Assert.assertFalse(checker.isPangram(text));
+        Assert.assertFalse(checker.isPangram(sentence));
+    }
+
+    @Test
+    public void detect_a_text_that_is_a_pangram() throws Exception {
+        String sentence = "The quick brown fox jumps over the lazy dog";
+
+        PangramChecker checker = new PangramChecker();
+
+        Assert.assertTrue(checker.isPangram(sentence));
     }
 }

@@ -1,7 +1,7 @@
 package org.detect_the_pangram;
 
 public class PangramChecker {
-    public boolean isPangram(String text) {
+    public boolean isPangram(String sentence) {
         return false;
     }
 }
