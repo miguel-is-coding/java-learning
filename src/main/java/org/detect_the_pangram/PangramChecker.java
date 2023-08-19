@@ -3,15 +3,16 @@ package org.detect_the_pangram;
 import java.util.ArrayList;
 
 public class PangramChecker {
-    public String[] alphabet = {"a", "b", "c", "d", "f", "g", "h", "y", "j","k","l","m","n","o","p","q","r","s","t","v","w","x","y","z"};
+    private static final int ALPHABET_LENGTH = 26;
 
     public boolean isPangram(String sentence) {
-        ArrayList<String> matches = new ArrayList<>(this.alphabet.length);
-        for (String letter: this.alphabet) {
-            if (sentence.toLowerCase().contains(letter)) {
-                matches.add(letter);
+        ArrayList<String> matches = new ArrayList<>();
+        for (char letter = 'a'; letter <= 'z'; letter++) {
+            String parsedLetter = String.valueOf(letter);
+            if (sentence.toLowerCase().contains(parsedLetter)) {
+                matches.add(parsedLetter);
             }
         }
-        return matches.toArray().length == this.alphabet.length;
+        return matches.toArray().length == ALPHABET_LENGTH;
     }
 }
