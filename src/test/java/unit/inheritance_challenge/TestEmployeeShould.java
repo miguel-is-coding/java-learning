@@ -11,7 +11,7 @@ import java.time.Month;
 public class TestEmployeeShould {
     @Test
     public void have_an_employee_id_and_hire_date_assigned() throws Exception {
-        int employeeId = 1;
+        long employeeId = 1;
         LocalDate hireDate = LocalDate.of(2022, Month.JULY, 1);
 
         Employee employee = new Employee(
