@@ -32,4 +32,8 @@ public class Worker {
     public void terminate(LocalDate endDate) {
         this.endDate = endDate;
     }
+
+    public double collectPay() {
+        return 0.0;
+    }
 }
