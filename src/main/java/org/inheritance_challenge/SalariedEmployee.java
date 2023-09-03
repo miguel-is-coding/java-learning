@@ -19,10 +19,6 @@ public class SalariedEmployee extends Employee{
         this.annualSalary = annualSalary;
     }
 
-    public double annualSalary() {
-        return this.annualSalary;
-    }
-
     public boolean isRetired() {
         return this.isRetired;
     }
