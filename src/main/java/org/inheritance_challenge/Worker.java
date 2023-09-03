@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import java.time.chrono.ChronoLocalDate;
 
 public class Worker {
-    private String name;
-    private LocalDate birthDate;
+    private final String name;
+    private final LocalDate birthDate;
     private LocalDate endDate;
 
     public Worker(String name, LocalDate birthDate) {
@@ -25,11 +25,11 @@ public class Worker {
         return LocalDate.now().minusYears(birthDate.getYear()).getYear();
     }
 
-    public void terminate(LocalDate endDate) {
-        this.endDate = endDate;
-    }
-
     public LocalDate getEndDate() {
         return this.endDate;
+    }
+
+    public void terminate(LocalDate endDate) {
+        this.endDate = endDate;
     }
 }

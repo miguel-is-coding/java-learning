@@ -26,7 +26,7 @@ public class TestWorkerShould {
     }
 
     @Test
-    public void be_able_to_assign_their_end_date() throws Exception {
+    public void be_able_to_terminate_their_work() throws Exception {
         Worker worker = new Worker("Maria", LocalDate.of(1994, Month.MARCH, 8));
         LocalDate endDate = LocalDate.of(2025, Month.MAY, 24);
 
