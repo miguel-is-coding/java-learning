@@ -36,4 +36,8 @@ public class SalariedEmployee extends Employee{
             return this.annualSalary / Month.values().length;
         }
     }
+
+    public double annualSalary() {
+        return this.annualSalary;
+    }
 }

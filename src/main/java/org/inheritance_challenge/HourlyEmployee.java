@@ -22,7 +22,7 @@ public class HourlyEmployee extends Employee{
         return WORKING_HOURS * hourlyPayRate;
     }
 
-    public double getDoublePay() {
+    public double collectDoubledPay() {
         return 2 * collectPay();
     }
 }
