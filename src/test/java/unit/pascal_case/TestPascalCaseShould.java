@@ -47,6 +47,15 @@ public class TestPascalCaseShould {
 
     @Test
     public void join_text_when_it_contains_capitalized_words_separated_by_either_underscore_or_hyphen() {
+        String text = "foo_bar foo-bar";
+
+        TextFormatter textFormatter = new TextFormatter();
+
+        Assert.assertEquals("FooBarFooBar", textFormatter.pascalCase(text));
+    }
+
+    @Test
+    public void capitalize_text_when_it_contains_lowercase_words() {
         String text = "Foo_Bar-Foo";
 
         TextFormatter textFormatter = new TextFormatter();
