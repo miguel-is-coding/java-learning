@@ -5,6 +5,7 @@ public class TextFormatter {
         if (text.isEmpty()) {
             return "";
         }
-        return text;
+        String[] splittedText = text.split(" ");
+        return String.join("", splittedText);
     }
 }
