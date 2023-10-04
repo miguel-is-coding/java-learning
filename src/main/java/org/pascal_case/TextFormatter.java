@@ -7,6 +7,11 @@ public class TextFormatter {
         }
         String delimiters = "[-_\\s]";
         String[] splitText = text.split(delimiters);
+        String[] capitalizedWords = capitalizeWords(splitText);
+        return String.join("", capitalizedWords);
+    }
+
+    private static String[] capitalizeWords(String[] splitText) {
         String[] capitalizedWords = new String[splitText.length];
         for (int i = 0; i < splitText.length; i++) {
             String word = splitText[i];
@@ -14,6 +19,6 @@ public class TextFormatter {
             String capitalizedWord = word.replace(firstCharacter, firstCharacter.toUpperCase());
             capitalizedWords[i] = capitalizedWord;
         }
-        return String.join("", capitalizedWords);
+        return capitalizedWords;
     }
 }
