@@ -29,4 +29,13 @@ public class TestFactorialShould {
 
         Assert.assertEquals(2, numberOperator.factorial(input));
     }
+
+    @Test
+    public void give_6_when_given_number_is_3() {
+        int input = 3;
+
+        NumberOperator numberOperator = new NumberOperator();
+
+        Assert.assertEquals(6, numberOperator.factorial(input));
+    }
 }
