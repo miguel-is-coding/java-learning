@@ -5,7 +5,7 @@ public class TextFormatter {
         if (text.isEmpty()) {
             return "";
         }
-        String[] splittedText = text.split(" ");
+        String[] splittedText = text.split("[-_\\s]");
         return String.join("", splittedText);
     }
 }
