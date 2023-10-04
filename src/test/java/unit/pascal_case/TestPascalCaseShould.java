@@ -35,4 +35,13 @@ public class TestPascalCaseShould {
 
         Assert.assertEquals("Foo", textFormatter.pascalCase(text));
     }
+
+    @Test
+    public void join_text_when_text_are_two_words_capitalized_separated_by_an_space() {
+        String text = "Foo Bar";
+
+        TextFormatter textFormatter = new TextFormatter();
+
+        Assert.assertEquals("FooBar", textFormatter.pascalCase(text));
+    }
 }
