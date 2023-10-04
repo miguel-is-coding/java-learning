@@ -26,4 +26,13 @@ public class TestPascalCaseShould {
 
         Assert.assertEquals("", textFormatter.pascalCase(text));
     }
+
+    @Test
+    public void do_not_change_text_when_text_is_one_word_capitalized() {
+        String text = "Foo";
+
+        TextFormatter textFormatter = new TextFormatter();
+
+        Assert.assertEquals("Foo", textFormatter.pascalCase(text));
+    }
 }
