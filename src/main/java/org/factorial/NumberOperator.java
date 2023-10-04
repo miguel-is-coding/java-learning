@@ -4,10 +4,9 @@ public class NumberOperator {
     public static final int MINIMAL_FACTORIAL = 1;
 
     public int factorial(int number) {
-        int factorialResult = MINIMAL_FACTORIAL;
-        for (int factor = 1; factor <= number; factor++) {
-            factorialResult *= factor;
+        if (number == MINIMAL_FACTORIAL) {
+            return MINIMAL_FACTORIAL;
         }
-        return factorialResult;
+        return number * factorial(number-1);
     }
 }
