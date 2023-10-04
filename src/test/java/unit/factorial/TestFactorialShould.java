@@ -10,7 +10,6 @@ public class TestFactorialShould {
 // 1 => 1
 // 2 => 2
 // 3 => 6
-// 4 => 24
 
     @Test
     public void give_1_when_given_number_is_1() {
