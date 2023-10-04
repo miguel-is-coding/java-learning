@@ -37,11 +37,20 @@ public class TestPascalCaseShould {
     }
 
     @Test
-    public void join_text_when_text_are_two_words_capitalized_separated_by_an_space() {
+    public void join_text_when_it_contains_capitalized_words_separated_by_an_space() {
         String text = "Foo Bar";
 
         TextFormatter textFormatter = new TextFormatter();
 
         Assert.assertEquals("FooBar", textFormatter.pascalCase(text));
+    }
+
+    @Test
+    public void join_text_when_it_contains_capitalized_words_separated_by_either_underscore_or_hyphen() {
+        String text = "Foo_Bar-Foo";
+
+        TextFormatter textFormatter = new TextFormatter();
+
+        Assert.assertEquals("FooBarFoo", textFormatter.pascalCase(text));
     }
 }
