@@ -2,6 +2,7 @@ package unit.pascal_case;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.pascal_case.TextFormatter;
 
 public class TestPascalCaseShould {
     /*
