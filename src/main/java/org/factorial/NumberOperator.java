@@ -1,13 +1,12 @@
 package org.factorial;
 
 public class NumberOperator {
+    public static final int MINIMAL_FACTORIAL = 1;
+
     public int factorial(int number) {
-        if (number == 1) {
-            return 1;
-        }
-        int factorialResult = 1;
-        for (int i = 1; i <= number; i++) {
-            factorialResult *= i;
+        int factorialResult = MINIMAL_FACTORIAL;
+        for (int factor = 1; factor <= number; factor++) {
+            factorialResult *= factor;
         }
         return factorialResult;
     }
